@@ -1,0 +1,350 @@
+/* --------------------------------- general Roles -------------------------------------------------- */
+:root {
+    --mainColor: #ff274b;
+    --secColor: #f7bcf7;
+    --lightColor: #fff;
+    --bcGround1: #171a1c;
+    --bcGround2: #313537;
+    --padding: 8%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: var(--lightColor);
+}
+
+p {
+    color: var(--secColor);
+    letter-spacing: 1px;
+}
+
+h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --------------------------------- Home -------------------------------------------------- */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bcGround1);
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: var(--mainColor);
+}
+
+.home h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+
+.home nav {
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    top: 0;
+}
+
+.home ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home ul li {
+    margin: 0.8rem 1.5rem
+}
+
+.home a {
+    text-decoration: none;
+    color: var(--lightColor);
+    transition: 0.3s;
+}
+
+.home a:hover {
+    color: var(--mainColor);
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    margin: 0.8rem 0rem;
+    border-radius: 30px;
+    color: var(--lightColor);
+    background-color: var(--mainColor);
+    transition: 0.3;
+}
+
+.btn:hover {
+    background-color: var(--lightColor);
+    color: var(--mainColor);
+}
+
+
+.home .content {
+    flex-grow: 1;
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin: 1.2rem 0;
+}
+
+.content h4 {
+    color: var(--secColor);
+}
+
+.content h3 {
+    margin-bottom: 3.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social i {
+    color: var(--mainColor);
+    margin-top: 3.5rem;
+    margin-right: 1.2rem;
+    font-size: 2.5rem;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    color: var(--lightColor);
+    transform: scale(110%);
+}
+
+.home .img {
+    position: relative;
+    width: 45%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img img {
+
+    position: absolute;
+    bottom: -20rem;
+    transition: 1s;
+}
+
+.img img:hover {
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+/* --------------------------------- about -------------------------------------------------- */
+
+.about {
+    background-color: var(--bcGround2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .container-img img {
+    width: 90%;
+}
+
+.about .container-img {
+    width: 35%;
+}
+
+
+.service {
+    background-color: var(--bcGround1);
+    ;
+    padding: 2rem var(--padding);
+}
+
+.service .box {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.service .box .card {
+    background-color: #313537;
+    border-radius: 20px;
+    width: 300px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.service .box .card i {
+    font-size: 1.5rem;
+    color: var(--mainColor);
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    margin-bottom: 1rem;
+}
+
+.skills {
+    background-color: var(--bcGround2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .container-img img {
+    width: 90%;
+}
+
+.skills .container-img {
+    width: 35%;
+}
+
+.skills .content-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-skills img {
+    width: 100px;
+}
+
+.footer-content {
+    background-color: var(--bcGround1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:575px) {
+    :root {
+        --padding: 1.5rem;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    .img img {
+        display: none;
+    }
+
+    .social {
+        flex-wrap: wrap;
+    }
+
+    .social i {
+        flex: 1 1 1.5rem;
+    }
+
+    .home .btn {
+        text-align: center;
+
+    }
+
+    .home ul {
+        display: none;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    nav {
+        top: 0;
+        right: 0;
+        left: 0;
+
+    }
+
+    h1 {
+        font-size: 3.5rem;
+
+    }
+
+    .home nav {
+        border-bottom: #313537 2px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        width: 50%;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service .box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .service .card {
+        margin-bottom: 50px;
+        flex: 0 1 1rem;
+    }
+
+    .skills .container-img img {
+        width: 30vw;
+    }
+
+    .home .container-text {
+        text-align: center;
+    }
+
+    .home nav .btn {
+        display: none;
+    }
+
+    .home .content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home {
+        height: auto;
+    }
+}
